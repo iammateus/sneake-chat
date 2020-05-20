@@ -3,8 +3,6 @@ from flask import Flask, jsonify
 from flask_socketio import SocketIO, join_room, leave_room
 from flask_pymongo import PyMongo
 
-eventlet.monkey_patch()
-
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'secret!'
 app.config["MONGO_URI"] = "mongodb://root:docker@mongo:27017/todos?authSource=admin"
@@ -18,14 +16,16 @@ def healthcheck():
     return jsonify(data)
 
 @socketio.on('message')
-def handle_message(message):
-    print('received message: ' + str(message))
+def handleMessage(data):
+    room = data['room']
+    socketio.emit('messaged', data, room=room)
 
 @socketio.on('join')
 def handleJoin(data):
+    who = data['who']
     room = data['room']
     join_room(room)
-    socketio.emit('joined', 'Someone joined the room', room=room)
+    socketio.emit('joined', who + ' joined the room', room=room)
 
 if __name__ == '__main__':
     socketio.run(app)
