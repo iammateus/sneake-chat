@@ -12,4 +12,4 @@ COPY . .
 RUN poetry config virtualenvs.create false
 RUN poetry install
 
-CMD flask run --host 0.0.0.0
+CMD flask run --host '0.0.0.0'
