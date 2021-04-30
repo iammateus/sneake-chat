@@ -11,4 +11,4 @@ A [chat](https://github.com/iammateus/sneake-chat-app) server created using Pyth
     $ docker-compose up
 
 ## License
-[MIT](https://github.com/iammateus/sneake-chat/blob/master/LICENSE).
+[MIT](https://github.com/iammateus/sneake-chat/blob/master/LICENSE)
