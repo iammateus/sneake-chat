@@ -1,6 +1,6 @@
 # Sneake Chat
 
-A [chat](https://github.com/iammateus/sneake-chat-app) server created using Python and socket.oi.
+The back-end of the [Sneake Chat App](https://github.com/iammateus/sneake-chat-app), created with Python and socket.io.
 
 ## Requeriments
 
