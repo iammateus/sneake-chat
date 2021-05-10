@@ -4,7 +4,7 @@ The back-end of the [Sneake Chat App](https://github.com/iammateus/sneake-chat-a
 
 ## Requeriments
 
-- [Docker](https://docs.docker.com/).
+- [Docker](https://docs.docker.com/)
 
 ## Installation
 
